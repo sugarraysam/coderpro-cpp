@@ -1,4 +1,4 @@
-TARGETS := "install ci-install build test clean help"
+TARGETS := "install install test clean help"
 .PHONY: $(TARGETS)
 
 export BAZEL_VERSION := 3.7.1
@@ -6,15 +6,8 @@ export BAZEL_VERSION := 3.7.1
 install:
 	@./scripts/install.sh
 
-ci-install:
-	@./scripts/ci-install-bazel.sh
-
-build:
-	@bazel build //...
-
-# TODO add coverage report for coveralls
 test:
-	@bazel test //...
+	@./scripts/test.sh
 
 clean:
 	@bazel clean

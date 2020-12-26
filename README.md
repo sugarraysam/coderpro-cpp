@@ -13,9 +13,7 @@ I provided a complexity analysis of both memory and time for every solution. I a
 
 - default to c++20 (bazel build args)
 - refactor to use module imports
-- travis
-- coveralls
-- google test getting started
+- coveralls and bazel coverage
 
 # Resources
 

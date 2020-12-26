@@ -13,11 +13,8 @@ addons:
     update: true
 
 install:
-  - make ci-install
   - pip3 install cpp-coveralls
+  - make install
 
 script:
   - make test
-
-after_success:
-  - coveralls --exclude tests --gcov-options '\-lp'
