@@ -1,7 +1,7 @@
 TARGETS := "install ci-install build test clean help"
 .PHONY: $(TARGETS)
 
-export BAZEL_VERSION := 3.7
+export BAZEL_VERSION := 3.7.1
 
 install:
 	@./scripts/install.sh

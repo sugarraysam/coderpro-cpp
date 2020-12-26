@@ -19,4 +19,6 @@ I provided a complexity analysis of both memory and time for every solution. I a
 
 # Resources
 
-- [cpp-coveralls](https://github.com/eddyxu/cpp-coveralls)
+- [bazelbuild/bazel](https://github.com/bazelbuild/bazel)
+- [google/googletest](https://github.com/google/googletest)
+- [eddyxu/cpp-coveralls](https://github.com/eddyxu/cpp-coveralls)
