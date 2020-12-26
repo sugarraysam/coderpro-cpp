@@ -1,0 +1,11 @@
+language: cpp
+
+install:
+  - make ci-install
+  - pip3 install cpp-coveralls
+
+script:
+  - make test
+
+after_success:
+  - coveralls --exclude tests --gcov-options '\-lp'
