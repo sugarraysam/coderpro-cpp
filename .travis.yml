@@ -1,4 +1,16 @@
-language: cpp
+language: python
+python:
+  - "3.8"
+
+addons:
+  apt:
+    packages:
+      - git
+      - make
+      - g++
+      - unzip
+      - zip
+    update: true
 
 install:
   - make ci-install

@@ -6,5 +6,4 @@ BAZEL_URL="https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION
 
 curl -sL --output "${TMPDIR}/${BAZEL_DEB}" "${BAZEL_URL}"
 sudo dpkg --force-all -i "${TMPDIR}/${BAZEL_DEB}"
-
 bazel --version
