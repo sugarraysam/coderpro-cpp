@@ -11,11 +11,11 @@ function installBazelTravis() {
 }
 
 function installBazelLocal() {
-    MAJOR_BAZEL_VERSION="$(echo ${BAZEL_VERSION} | cut -c 1,2,3)"
-    URL="https://docs.bazel.build/versions/${MAJOR_BAZEL_VERSION}.0/install.html"
+    BAZEL_MAJOR_VERSION="$(echo ${BAZEL_VERSION} | cut -c1)"
+    URL="https://docs.bazel.build/versions/${BAZEL_MAJOR_VERSION}.0/install.html"
 
-    if [[ ! "$(bazel --version 2>/dev/null)" =~ ${MAJOR_BAZEL_VERSION} ]]; then
-        echo 2>"Please install bazel version >= ${MAJOR_BAZEL_VERSION}"
+    if [[ ! "$(bazel --version 2>/dev/null)" == "${BAZEL_MAJOR_VERSION}*" ]]; then
+        echo 2>"Please install a bazel version compatible with ${BAZEL_VERSION}"
         echo 2>"Follow insttructions here: ${URL}"
     fi
 }

@@ -4,16 +4,21 @@ Solutions for [CoderPro](https://www.techseries.dev/products/coderpro) series. W
 
 I provided a complexity analysis of both memory and time for every solution. I am not sharing the problems as this is a proprietary product.
 
+This project is built using `Bazel` and `TravisCI`.
 
 # Test
 
-**TODO**
+All tests live under the `tests/` directory. You can run all tests with coverage using:
+
+```
+$ make install
+$ make test
+```
 
 # TODO
 
 - default to c++20 (bazel build args)
 - refactor to use module imports
-- coveralls and bazel coverage
 
 # Resources
 

@@ -1,4 +1,4 @@
-TARGETS := "install install test clean help"
+TARGETS := "install test clean help"
 .PHONY: $(TARGETS)
 
 export BAZEL_VERSION := 3.7.1
