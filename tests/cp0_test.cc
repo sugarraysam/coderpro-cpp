@@ -6,4 +6,5 @@ TEST(CP0, Addition)
     ASSERT_EQ(4, add(3, 1));
     ASSERT_EQ(7, add(7, 0));
     ASSERT_EQ(-3, add(3, -6));
+    ASSERT_EQ(0, add(0, 0));
 }
