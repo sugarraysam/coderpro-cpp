@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 bazel coverage //...
 
 if [ "${TRAVIS}" == "true" ]; then

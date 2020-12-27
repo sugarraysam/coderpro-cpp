@@ -10,7 +10,7 @@ test:
 	@./scripts/test.sh
 
 clean:
-	@bazel clean
+	@bazel clean --expunge
 
 help:
 	@echo "[ $(TARGETS) ]"

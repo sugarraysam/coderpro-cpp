@@ -4,7 +4,7 @@ Solutions for [CoderPro](https://www.techseries.dev/products/coderpro) series. W
 
 I provided a complexity analysis of both memory and time for every solution. I am not sharing the problems as this is a proprietary product.
 
-This project is built using `Bazel` and `TravisCI`.
+This project is built using `C++17`, `Bazel` and `TravisCI`.
 
 # Test
 
@@ -15,13 +15,10 @@ $ make install
 $ make test
 ```
 
-# TODO
-
-- default to c++20 (bazel build args)
-- refactor to use module imports
-
 # Resources
 
 - [bazelbuild/bazel](https://github.com/bazelbuild/bazel)
 - [google/googletest](https://github.com/google/googletest)
 - [eddyxu/cpp-coveralls](https://github.com/eddyxu/cpp-coveralls)
+- [Bazel default C++ toolchain config](https://github.com/bazelbuild/bazel/blob/master/tools/cpp/cc_toolchain_config.bzl)
+- [.bazelrc format](https://docs.bazel.build/versions/master/guide.html#bazelrc)

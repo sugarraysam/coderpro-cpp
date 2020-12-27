@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 function installBazelTravis() {
     TMPDIR="${TMPDIR:-/tmp}"
     BAZEL_DEB="bazel_${BAZEL_VERSION}-linux-x86_64.deb"

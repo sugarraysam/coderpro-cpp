@@ -1,7 +1,10 @@
-#
-# Coverage: exclude "tests/" and generate lcov report
-#
-coverage --instrumentation_filter="-/tests[:/]" \
-    --experimental_cc_coverage \
-    --combined_report=lcov \
-    --coverage_report_generator=@bazel_tools//tools/test/CoverageOutputGenerator/java/com/google/devtools/coverageoutputgenerator:Main
+# build options
+# (fastbuild | dbg | opt)
+build --compilation_mode fastbuild
+build --cxxopt='-std=c++17'
+
+# exclude "tests/" and generate lcov report
+coverage --instrumentation_filter="-/tests[:/]"
+coverage --experimental_cc_coverage
+coverage --combined_report=lcov
+coverage --coverage_report_generator=@bazel_tools//tools/test/CoverageOutputGenerator/java/com/google/devtools/coverageoutputgenerator:Main
