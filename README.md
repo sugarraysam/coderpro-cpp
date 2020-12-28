@@ -4,11 +4,11 @@ Solutions for [CoderPro](https://www.techseries.dev/products/coderpro) series. W
 
 I provided a complexity analysis of both memory and time for every solution. I am not sharing the problems as this is a proprietary product.
 
-This project is built using `C++17`, `Bazel` and `TravisCI`.
+This project is built using `C++17`, `Bazel` and `TravisCI`. It also uses the `GoogleTest` and `Abseil` libraries.
 
 # Test
 
-All tests live under the `tests/` directory. You can run all tests with coverage using:
+All tests live alongside the corresponding `*.cc` file under `challenges/`:
 
 ```
 $ make install

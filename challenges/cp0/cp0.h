@@ -1,6 +1,3 @@
-#if !defined(CP0_H)
-#define CP0_H
+#pragma once
 
 int add(int, int);
-
-#endif // CP0_H
