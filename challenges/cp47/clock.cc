@@ -1,6 +1,3 @@
-#include "clock.h"
-#include <cmath>
-
 /*
 Angles of a Clock - https://leetcode.com/problems/angle-between-hands-of-a-clock/
 
@@ -13,6 +10,9 @@ Time-Complexity:
 Space-Complexity:
     O(1), we store two integers for mins and hours
 */
+
+#include "challenges/cp47/clock.h"
+#include <cmath>
 
 bool Clock::is_valid() const
 {

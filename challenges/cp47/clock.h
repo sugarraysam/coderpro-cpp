@@ -11,6 +11,7 @@ private:
 
 public:
     Clock(unsigned int mins, unsigned int hours) : mins(mins), hours(hours){};
+
     bool is_valid() const;
     float get_angle() const;
 };

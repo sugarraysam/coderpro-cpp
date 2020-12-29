@@ -1,4 +1,4 @@
-#include "clock.h"
+#include "challenges/cp47/clock.h"
 #include "gtest/gtest.h"
 
 struct Case
