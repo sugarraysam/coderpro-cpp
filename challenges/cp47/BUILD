@@ -1,16 +1,16 @@
 load("@rules_cc//cc:defs.bzl", "cc_library", "cc_test")
 
 cc_library(
-    name = "cp0",
-    srcs = ["cp0.cc"],
-    hdrs = ["cp0.h"],
+    name = "cp47",
+    srcs = ["clock.cc"],
+    hdrs = ["clock.h"],
 )
 
 cc_test(
-    name = "cp0_test",
-    srcs = ["cp0_test.cc"],
+    name = "cp47_test",
+    srcs = ["clock_test.cc"],
     deps = [
-        ":cp0",
+        ":cp47",
         "@com_google_googletest//:gtest_main",
     ],
 )
