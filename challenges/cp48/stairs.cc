@@ -10,24 +10,38 @@ Time-Complexity:
     O(n), we upgrade the cache linearly until reaching n
 
 Space-Complexity:
-    [with cache] O(n), we store f(n) for each value up until n
+    [with cache] O(n), we store f(n) for each value up until n, we could argue there will also be
+                O(n) space used in recursion depth for the first call when cache is empty
     [without cache] O(1), we dont store intermediary results
 */
 
 #include "challenges/cp48/stairs.h"
 
-int Stairs::solve_with_cache()
+int Stairs::solve_with_cache(const int n)
 {
+    // base case: dont need to populate cache for n < 2
     if (n < 2)
+    {
         return 1;
+    }
 
-    for (int i = 2; i < n; ++i)
-        cache.insert({i, cache[i - 1] + cache[i - 2]});
+    auto n1 = cache.find(n - 1);
+    auto n2 = cache.find(n - 2);
 
-    return cache[n - 1] + cache[n - 2];
+    // both cached
+    if (n1 != cache.end() && n2 != cache.end())
+    {
+        int v = n1->second + n2->second;
+        cache.insert({n, v});
+        return v;
+    }
+    else
+    {
+        return this->solve_with_cache(n - 1) + this->solve_with_cache(n - 2);
+    }
 }
 
-int Stairs::solve_without_cache()
+int Stairs::solve_without_cache(const int n)
 {
     if (n < 2)
         return 1;

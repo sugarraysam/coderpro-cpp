@@ -18,18 +18,18 @@ std::vector<Case> TestCases = {
 
 TEST(CP48, TestStairsWithCache)
 {
+    Stairs s;
     for (auto &tc : TestCases)
     {
-        Stairs s{tc.n};
-        ASSERT_EQ(s.solve_with_cache(), tc.expected);
+        ASSERT_EQ(s.solve_with_cache(tc.n), tc.expected);
     }
 }
 
 TEST(CP48, TestStairsWithoutCache)
 {
+    Stairs s;
     for (auto &tc : TestCases)
     {
-        Stairs s{tc.n};
-        ASSERT_EQ(s.solve_without_cache(), tc.expected);
+        ASSERT_EQ(s.solve_without_cache(tc.n), tc.expected);
     }
 }
