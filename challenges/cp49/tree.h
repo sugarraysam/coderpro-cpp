@@ -7,6 +7,8 @@ using namespace std;
 class Node
 {
 public:
+    // convert char '2' -> int 2 OR char '3' -> int 3, etc.
+    Node(const char c) : val(c - '0') {}
     Node(const int v) : val(v) {}
 
     void append_left(const int val);
@@ -22,7 +24,7 @@ class Tree
 {
 private:
     void serialize_helper(const unique_ptr<Node> &node, string &acc);
-    unique_ptr<Node> deserialize(const string &s, int &i);
+    unique_ptr<Node> deserialize(const string &s, size_t &i);
 
 public:
     Tree() {}

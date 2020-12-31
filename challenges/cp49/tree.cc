@@ -27,6 +27,7 @@ Space-Complexity:
 
 using namespace std;
 
+// Tree methods
 string Tree::serialize()
 {
     string acc;
@@ -49,24 +50,21 @@ void Tree::serialize_helper(const unique_ptr<Node> &node, string &acc)
 
 Tree::Tree(const string &s)
 {
-    int i = 0;
+    size_t i = 0;
     this->root = move(this->deserialize(s, i));
 }
 
-unique_ptr<Node> Tree::deserialize(const std::string &s, int &i)
+unique_ptr<Node> Tree::deserialize(const std::string &s, size_t &i)
 {
     if (i >= s.length() || s[i] == this->marker)
         return nullptr;
 
-    // convert char '2' -> int 2 OR char '3' -> int 3, etc.
-    auto node = make_unique<Node>(s[i] - '0');
+    auto node = make_unique<Node>(s[i]);
 
-    auto lnode = this->deserialize(s, ++i);
-    if (lnode != nullptr)
+    if (auto lnode = this->deserialize(s, ++i))
         node->left = move(lnode);
 
-    auto rnode = this->deserialize(s, ++i);
-    if (rnode != nullptr)
+    if (auto rnode = this->deserialize(s, ++i))
         node->right = move(rnode);
 
     return node;
