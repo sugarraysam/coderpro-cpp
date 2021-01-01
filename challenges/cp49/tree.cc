@@ -19,8 +19,11 @@ Time-Complexity:
     O(n), we traverse all nodes in the tree, linear (both serializing & deserializing)
 
 Space-Complexity:
-    O(n), we store each node as a ptr (with val etc.), because its both serialize and deserialize
-        are recursive, we could argue the call stack also takes O(n) space
+    O(n), we store each node as a ptr (with val etc.), also...
+        serialize -> this is a tail recursive function so the compiler should optimize this and
+                    not pile up function calls on the stack
+        deserialize -> not tail-recursive, which means we could argue there will be O(n) space used
+                        on the stack for function calls
 */
 
 #include "challenges/cp49/tree.h"
