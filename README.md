@@ -1,4 +1,4 @@
-# CoderPro (Part 2) [![Build Status](https://www.travis-ci.com/sugarraysam/coderpro-cpp.svg?branch=main)](https://www.travis-ci.com/sugarraysam/coderpro-cpp) [![Coverage Status](https://coveralls.io/repos/github/sugarraysam/coderpro-cpp/badge.svg?branch=main)](https://coveralls.io/github/sugarraysam/coderpro-cpp?branch=main)
+# CoderPro (Part 2) [![Build Status](https://www.travis-ci.com/sugarraysam/coderpro-cpp.svg?branch=master)](https://www.travis-ci.com/sugarraysam/coderpro-cpp) [![Coverage Status](https://coveralls.io/repos/github/sugarraysam/coderpro-cpp/badge.svg?branch=master)](https://coveralls.io/github/sugarraysam/coderpro-cpp?branch=master)
 
 Solutions for [CoderPro](https://www.techseries.dev/products/coderpro) series. Walkthrough of popular interview questions in C++.
 
@@ -24,3 +24,4 @@ $ make test
 - [eddyxu/cpp-coveralls](https://github.com/eddyxu/cpp-coveralls)
 - [Bazel default C++ toolchain config](https://github.com/bazelbuild/bazel/blob/master/tools/cpp/cc_toolchain_config.bzl)
 - [.bazelrc format](https://docs.bazel.build/versions/master/guide.html#bazelrc)
+- [A Tour of C++ - Bjarne Stroustrup](https://www.amazon.com/Tour-2nd-Depth-Bjarne-Stroustrup/dp/0134997832/ref=sr_1_3?dchild=1&keywords=bjarne&qid=1609535844&sr=8-3&tag=duckduckgo-ffab-b-20)
