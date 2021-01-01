@@ -25,63 +25,57 @@ Space-Complexity:
 
 #include "challenges/cp49/tree.h"
 
-using namespace std;
-
 // Tree methods
-string Tree::serialize()
+std::string Tree::serialize()
 {
-    string acc;
-    this->serialize_helper(this->root, acc);
+    std::string acc;
+    this->serialize_helper(this->root_.get(), acc);
     return acc;
 }
 
-void Tree::serialize_helper(const unique_ptr<Node> &node, string &acc)
+// `node` data & ptr are Read-Only
+void Tree::serialize_helper(const Node *const node, std::string &acc)
 {
     if (node == nullptr)
     {
-        acc += this->marker;
+        acc += this->marker_;
         return;
     }
-    acc += to_string(node->val);
+    acc += std::to_string(node->val);
 
-    serialize_helper(node->left, acc);
-    serialize_helper(node->right, acc);
+    serialize_helper(node->left.get(), acc);
+    serialize_helper(node->right.get(), acc);
 }
 
-Tree::Tree(const string &s)
+Tree::Tree(const std::string &s)
 {
     size_t i = 0;
-    this->root = move(this->deserialize(s, i));
+    this->root_ = this->deserialize(s, i);
 }
 
-unique_ptr<Node> Tree::deserialize(const std::string &s, size_t &i)
+std::unique_ptr<Node> Tree::deserialize(const std::string &s, std::size_t &i)
 {
-    if (i >= s.length() || s[i] == this->marker)
+    if (i >= s.length() || s[i] == this->marker_)
         return nullptr;
 
-    auto node = make_unique<Node>(s[i]);
-
-    if (auto lnode = this->deserialize(s, ++i))
-        node->left = move(lnode);
-
-    if (auto rnode = this->deserialize(s, ++i))
-        node->right = move(rnode);
-
+    auto node = std::make_unique<Node>(s[i]);
+    node->left = this->deserialize(s, ++i);
+    node->right = this->deserialize(s, ++i);
     return node;
 }
 
 // Node methods
-void Node::append_left(const int val)
+void Node::append_left(int val)
 {
     this->left = std::make_unique<Node>(val);
 }
 
-void Node::append_right(const int val)
+void Node::append_right(int val)
 {
     this->right = std::make_unique<Node>(val);
 }
 
-void Node::append_both(const int lval, const int rval)
+void Node::append_both(int lval, int rval)
 {
     this->append_left(lval);
     this->append_right(rval);
