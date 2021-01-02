@@ -1,6 +1,7 @@
 # build options
 # (fastbuild | dbg | opt)
 build --compilation_mode fastbuild
+build --repo_env='CC=clang'
 build --cxxopt='-std=c++17'
 
 # generate lcov report

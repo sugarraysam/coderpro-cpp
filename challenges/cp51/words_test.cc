@@ -1,4 +1,4 @@
-#include "challenges/cp51/words.h"
+#include "words.h"
 #include "gtest/gtest.h"
 
 struct Case {

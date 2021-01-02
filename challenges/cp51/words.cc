@@ -14,7 +14,7 @@ Space-Complexity:
     O(n), we store a letter->wordID hashmap
 */
 
-#include "challenges/cp51/words.h"
+#include "words.h"
 
 bool Words::can_be_chained() {
   for (size_t i = 0; i < words_.size(); ++i) {
