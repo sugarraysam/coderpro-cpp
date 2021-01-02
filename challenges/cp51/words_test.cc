@@ -9,7 +9,7 @@ struct Case {
 std::vector<Case> TestCases = {
     Case{.words = {"apple", "eggs", "snack", "kacat", "tuna"},
          .expected = true},
-    Case{.words = {"apple", "ea", "apple", "ea"}, .expected = false},
+    Case{.words = {"apple", "ea", "apple", "ea"}, .expected = true},
     Case{.words = {""}, .expected = true},
     Case{.words = {"geek", "king"}, .expected = true},
     Case{.words = {"for", "geek", "rig", "kaf"}, .expected = true},

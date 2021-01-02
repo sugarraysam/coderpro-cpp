@@ -8,12 +8,13 @@ class Words {
 private:
   std::vector<std::string> words_;
   std::unordered_set<int> visited_;
-  std::unordered_map<char, int> word_map_;
+  std::unordered_map<char, std::vector<int>> graph_;
 
-  void populate_word_map();
-  bool is_visited(int word);
-  char next_letter(int word);
-  bool visited_all_words();
+  bool is_cycle_dfs(int curr, int start, int len);
+  char first_letter(int i);
+  char last_letter(int i);
+  std::vector<int> get_neighbors(int i);
+  bool is_visited(int i);
 
 public:
   Words(std::vector<std::string> words) : words_(std::move(words)) {}
