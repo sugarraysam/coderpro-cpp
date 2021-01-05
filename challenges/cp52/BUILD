@@ -1,16 +1,16 @@
 load("@rules_cc//cc:defs.bzl", "cc_library", "cc_test")
 
 cc_library(
-    name = "cp51",
+    name = "cp52",
     srcs = ["intervals.cc"],
     hdrs = ["intervals.h"],
 )
 
 cc_test(
-    name = "cp51_test",
+    name = "cp52_test",
     srcs = ["intervals_test.cc"],
     deps = [
-        ":cp51",
+        ":cp52",
         "@com_google_googletest//:gtest_main",
     ],
 )

@@ -18,7 +18,7 @@ std::vector<Case> TestCases = {
     Case{.intervals = {Interval(1, 4)}, .expected = {Interval(1, 4)}},
 };
 
-TEST(cp51, TestIntervals) {
+TEST(CP52, TestIntervals) {
   for (const auto &tc : TestCases)
     ASSERT_EQ(Solution(std::move(tc.intervals)).solve(), tc.expected);
 }

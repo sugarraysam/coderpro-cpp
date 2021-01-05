@@ -18,7 +18,7 @@ std::vector<Case> TestCases = {
     Case{.words = {"ijk", "kji", "abc", "cba"}, .expected = false},
 };
 
-TEST(cp51, TestSubstring) {
+TEST(CP51, TestSubstring) {
   for (const auto &tc : TestCases)
     ASSERT_EQ(Words(tc.words).can_be_chained(), tc.expected);
 }

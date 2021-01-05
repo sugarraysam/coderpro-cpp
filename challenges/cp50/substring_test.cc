@@ -15,7 +15,7 @@ std::vector<Case> TestCases = {
     Case{.s = "z", .expected = "z"},
 };
 
-TEST(cp50, TestSubstring) {
+TEST(CP50, TestSubstring) {
   for (auto &tc : TestCases)
     ASSERT_EQ(Substring(tc.s).solve().get_string(), tc.expected);
 }
