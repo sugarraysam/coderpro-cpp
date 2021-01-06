@@ -2,11 +2,14 @@
 
 Solutions for [CoderPro](https://www.techseries.dev/products/coderpro) series. Walkthrough of popular interview questions in C++.
 
-View [Part 1 in Python: `sugarraysam/coderpro-py`](https://github.com/sugarraysam/coderpro-py).
+View:
+
+- [Part 1 in Python: `sugarraysam/coderpro-py`](https://github.com/sugarraysam/coderpro-py).
+- [Part 3 in Golang: `sugarraysam/coderpro-go`](https://github.com/sugarraysam/coderpro-go).
 
 I provided a complexity analysis of both memory and time for every solution. I am not sharing the problems as this is a proprietary product.
 
-This project is built using `C++17`, `Bazel` and `TravisCI`. It also uses the `GoogleTest` and `Abseil` libraries.
+This project is built using `C++17`, `Bazel` and `TravisCI`. It also uses the `GoogleTest` library for testing.
 
 # Test
 
